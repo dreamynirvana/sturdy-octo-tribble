@@ -1,0 +1,11 @@
+def palindrome?(str)
+  str = str.downcase.gsub(/[^a-z]/, '') # Приведение строки к нижнему регистру и удаление не буквенно-цифровых символов
+  str == str.reverse # Проверка, является ли строка палиндромом
+end
+
+# Пример использования функции palindrome?()
+string1 = "А роза упала на лапу Азора"
+string2 = "Hello, world!"
+
+puts "Строка '#{string1}' является палиндромом: #{palindrome?(string1)}"
+puts "Строка '#{string2}' является палиндромом: #{palindrome?(string2)}"
